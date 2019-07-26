@@ -23,7 +23,7 @@ export class BalanceFinderComponent implements OnInit {
     } else if (_validReceivedAmount && !_validActualAmount) {
       return -this.receivedAmount;
     } else {
-      return this.receivedAmount - this.actualAmount
+      return Number(this.receivedAmount - this.actualAmount)
     }
   }
 
