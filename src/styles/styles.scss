@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './util.scss';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+  background: linear-gradient(-45deg, $primary-color 50%, $primary-light-color 50%) !important;
+  background-size: cover;
+}

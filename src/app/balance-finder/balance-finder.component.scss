@@ -1,0 +1,108 @@
+@import "../../styles/util.scss";
+
+.content-wrapper {
+  top: 50%;
+  left: 50%;
+  min-height: 500px;
+  height: 90vh;
+  width: 80vw;
+  position: absolute;
+  background: #fff;
+  margin-top: -45vh;
+  margin-left: -40vw;
+  border-radius: 4px;
+  z-index: 10;
+  &.orb-shadow {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  }
+  background: linear-gradient($primary-color 270px, #fff 270px) !important;
+}
+
+.content-wrapper[balance="negative"] {
+  background: linear-gradient($warn-color 270px, #fff 270px) !important;
+}
+
+.orb-bg-primary {
+  background-color: $primary-color;
+}
+
+.orb-balance-amount {
+  font-size: 100px;
+  color: white;
+  font-weight: 300;
+  text-overflow: ellipsis;
+}
+
+.orb-flex {
+  display: flex;
+
+  &.orb-complete-center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.orb-content {
+    flex-direction: column;
+    padding: 5px 10px;
+    flex-grow: 1;
+  }
+
+  &.orb-input-wrapper {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+}
+
+.orb-header {
+  height: 270px;
+}
+
+.orb-input-wrapper > input {
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.orb-input-wrapper label {
+  color: #000;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  left: 10px;
+  position: absolute;
+  top: 29px;
+  transition: top 0.1s ease-in 0s;
+  z-index: 0;
+}
+
+@media not all and (hover: hover) {
+  .orb-input-wrapper input:hover {
+    border: #1b1b1b 2px solid;
+  }
+}
+
+.orb-input-wrapper input:focus {
+  border: $primary-color 2px solid;
+}
+
+.orb-input-wrapper input {
+  border: #dcdcdc 1px solid;
+}
+
+.orb-input-wrapper input:focus + label,
+.orb-input-wrapper input:valid + label {
+  top: 3px;
+  left: 12px;
+  color: $primary-color;
+  background: #fff;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.orb-input {
+  width: 100%;
+  height: 4em;
+  outline: none !important;
+  border-width: 0.1em;
+}

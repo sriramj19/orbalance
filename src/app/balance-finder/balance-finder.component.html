@@ -1,0 +1,21 @@
+<div class="content-wrapper orb-shadow" [attr.balance]="balanceAmount < 0 ? 'negative' : 'positive'">
+  <div class="orb-flex" style="flex-direction: column">
+    <div class="orb-header orb-flex orb-complete-center">
+      <div class="orb-balance-amount">
+        {{balanceAmount}}
+      </div>
+    </div>
+    <div class="orb-content orb-flex orb-complete-center">
+      <div class="orb-flex orb-input-wrapper">
+        <input [(ngModel)]="actualAmount" (keyup.enter)="onEnter('actual')" #actualAmountEl class="orb-input"
+          type="number" name="actual-amount" required>
+        <label for="actual-amount">Actual amount</label>
+      </div>
+      <div class="orb-flex orb-input-wrapper">
+        <input [(ngModel)]="receivedAmount" (keyup.enter)="onEnter('received')" #receivedAmountEl class="orb-input"
+          type="number" name="received-amount" required>
+        <label for="received-amount">Received amount</label>
+      </div>
+    </div>
+  </div>
+</div>
