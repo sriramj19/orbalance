@@ -7,8 +7,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 })
 export class BalanceFinderComponent implements OnInit {
 
-  private actualAmount: number;
-  private receivedAmount: number;
+  public actualAmount: number;
+  public receivedAmount: number;
 
   @ViewChild('actualAmountEl') private actualAmountEl: ElementRef;
   @ViewChild('receivedAmountEl') private receivedAmountEl: ElementRef;
